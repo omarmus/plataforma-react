@@ -1,0 +1,36 @@
+{
+  "especialidades": [
+    {
+      "id": 1,
+      "nombre": "Especialidad en React"
+    },
+    {
+      "id": 2,
+      "nombre": "Especialidad en Javascript"
+    }
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "nombre": "React desde cero"
+    },
+    {
+      "id": 1,
+      "nombre": "POO con Javascript"
+    }
+  ],
+  "profesores": [
+    {
+      "id": 1,
+      "nombre": "Omar Gutiérrez"
+    },
+    {
+      "id": 2,
+      "nombre": "Juan Mamani"
+    },
+    {
+      "id": 3,
+      "nombre": "Maria Flores"
+    }
+  ]
+}
