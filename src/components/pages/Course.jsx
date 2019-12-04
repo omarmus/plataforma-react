@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import store from '../../redux/store';
 import { getCourse } from '../../redux/actionCreators';
 import { Banner } from '../layout/Banner';
+import { Link } from 'react-router-dom';
 
 const Course = ({ course }) => {
 
@@ -52,10 +53,14 @@ const Course = ({ course }) => {
                     <div className='course-class l-section' key={item.class.id}>
                       <h3 className='s-mb-0'>{item.class.title}</h3>
                       <p>{item.class.description}</p>
-                      <ul>
+                      <ul className='data-list'>
                         {
                           item.subjects.map(subject => (
-                            <li>{subject.subject.title}</li>
+                            <li>
+                              <Link
+                                className='color dark-color'
+                                to={`/clase/${subject.subject.id}`}>{subject.subject.title}</Link>
+                            </li>
                           ))
                         }
                       </ul>
