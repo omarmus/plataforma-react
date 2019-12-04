@@ -31,7 +31,7 @@ export const getAllSpecialities = () => dispatch => {
     .then(response => {
       return dispatch({
         type: GET_ALL_SPECIALITIES,
-        posts: response.data
+        specialities: response.data
       });
     }).catch(e => {
       console.log('No se pudo obtener la respuesta');
@@ -43,7 +43,7 @@ export const getAllCourses = () => dispatch => {
     .then(response => {
       return dispatch({
         type: GET_ALL_COURSES,
-        posts: response.data
+        courses: response.data
       });
     }).catch(e => {
       console.log('No se pudo obtener la respuesta');
@@ -67,7 +67,7 @@ export const getAllClasses = () => dispatch => {
     .then(response => {
       return dispatch({
         type: GET_ALL_FRAGMENTS,
-        posts: response.data
+        clases: response.data
       });
     }).catch(e => {
       console.log('No se pudo obtener la respuesta');
@@ -88,7 +88,7 @@ export const getPost = id => dispatch => {
 };
 
 export const getSpeciality = id => dispatch => {
-  axios.get(`${API_URL}/especialidades/${id}`)
+  axios.get(`${API_URL}/especialidad/${id}`)
     .then(response => {
       return dispatch({
         type: GET_SPECIALITY,
